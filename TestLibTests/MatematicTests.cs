@@ -46,5 +46,15 @@ namespace TestLib.Tests
             var actual = m.DelA_B(a, b);
             Assert.AreEqual(expected, actual);
         }
+
+
+        [TestMethod()]
+        public void DelA_BTest_min4_0____Exeption()
+        {
+            Matematic m = new Matematic();
+            int a = -4;
+            int b = 0;
+            Assert.ThrowsException<Exception>(() => m.DelA_B(a, b));
+        }
     }
 }
